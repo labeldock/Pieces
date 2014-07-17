@@ -33,7 +33,7 @@ Extract is only be from LayerSet image.
 
 Insert in the name of LayerSet
 ```
- @filename[png|jpeg|jpg|gif] => docname~/filename.[png|jpeg|jpg|gif]
+ @filename[png|jpeg|jpg|gif]
 ```
 ![Insert in the name of LayerSet](/help-img/help-img-section-1.png)
 
