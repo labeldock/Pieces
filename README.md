@@ -8,12 +8,17 @@ This is intended as a quick reference and showcase.
 ### Table of Contents
   - [Concept](#concept)
   - [Important](#important)
+  - [SetupScript](#setup-script)
   - [Image Extraction](#extraction)
   - [Retina-resolution extraction](#retina-extraction)
   - [Style template extraction](#style-template-extraction)
   - [Except extraction](#except-extraction)
   - [Helper extraction](#helper-extraction)
   - [Extraction with canvas size](#extraction-with-canvas-size)
+
+
+
+
 
 <a name="concept"/>
 ## Concept #
@@ -23,6 +28,15 @@ This script is useful for developing web and mobile application layer extraction
 ## Important #
 Extract is only be from LayerSet image.
 
+## Setup Script #
+  pieces.jsx copy into Photoshop Scripts folder.
+  - OSX
+    - /Applications/Adobe Photoshop.../Presets/Scripts
+  - Windows
+    - C:\Program Files\Adobe\Adobe Photoshop...\Presets/Scripts
+    - C:\Program Files(x86)\Adobe\Adobe Photoshop...\Presets/Scripts
+
+<a name="setup"/>
 ## Usage #
 
 <a name="extraction"/>
@@ -30,14 +44,10 @@ Extract is only be from LayerSet image.
 @,파일이름,확장자명을 입력하면 하위폴더로 이미지가 추출됩니다.
 
 
-
-
 ```
  @filename[png|jpeg|jpg|gif]
 ```
 ![Insert in the name of LayerSet](/help-img/help-img-section-1.png)
-
-
 
 ```
 	@filename.png => docname~/filename.png
