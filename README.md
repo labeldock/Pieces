@@ -24,17 +24,22 @@ This is intended as a quick reference and showcase.
 ## Concept #
 This script is useful for developing web and mobile application layer extraction script.
 
+
 <a name="important"/>
 ## Important #
 Extract is only be from LayerSet image.
 
+
 ## Setup Script #
   pieces.jsx copy into Photoshop Scripts folder.
   - OSX
-    - /Applications/Adobe Photoshop.../Presets/Scripts
+    - /Applications/Adobe Photoshop.../Presets/Scripts 
+    - ![Insert in the name of LayerSet](/help-img/help-img-setup-1.png)
   - Windows
     - C:\Program Files\Adobe\Adobe Photoshop...\Presets/Scripts
     - C:\Program Files(x86)\Adobe\Adobe Photoshop...\Presets/Scripts
+
+
 
 <a name="setup"/>
 ## Usage #
