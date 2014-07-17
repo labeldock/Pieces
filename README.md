@@ -29,16 +29,24 @@ Extract is only be from LayerSet image.
 ### Extraction #
 @,파일이름,확장자명을 입력하면 하위폴더로 이미지가 추출됩니다.
 
-규칙
+
+
+Insert in the name of LayerSet
 ```
  @filename[png|jpeg|jpg|gif] => docname~/filename.[png|jpeg|jpg|gif]
 ```
+![Insert in the name of LayerSet](/help-img/help-img-section-1.png)
+
+
+Extract result
 ```
 	@filename.png => docname~/filename.png
 	@filename.gif => docname~/filename.gif
 	@filename.jpg => docname~/filename.jpg
 	@filename     => docname~/filename.png
 ```
+![Extract result](/help-img/help-img-section-2.png)
+
 
 <a name="retina-extraction"/>
 ### 레티나 해상도 파일 추출  #
