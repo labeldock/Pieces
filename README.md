@@ -31,14 +31,14 @@ Extract is only be from LayerSet image.
 
 
 
-Insert in the name of LayerSet
+
 ```
  @filename[png|jpeg|jpg|gif]
 ```
 ![Insert in the name of LayerSet](/help-img/help-img-section-1.png)
 
 
-Extract result
+
 ```
 	@filename.png => docname~/filename.png
 	@filename.gif => docname~/filename.gif
@@ -52,10 +52,13 @@ Extract result
 ### 레티나 해상도 파일 추출  #
 고해상도 이미지와 함께 저해상도를 추출하고자 할 때 사용가능합니다. 현재 png추출만 지원하고 있습니다.
 
-규칙
+
 ```
- @filename@2x => docname~/regular/filename.png , docname~/retina/filename.png
+ @filename@2x => docname~/regular/filename.png , docname~/retina/filename@2x.png
 ```
+![retina-extraction-named](/help-img/help-img-section-3.png)
+![retina-extraction-result](/help-img/help-img-section-4.png)
+
 
 <a name="style-template-extraction"/>
 ### 다수 레이어셋 스타일 적용  #
