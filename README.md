@@ -1,38 +1,38 @@
 
-
 This is intended as a quick reference and showcase.
 
+##### help me
+This is not a complete sentence in English. 
+Please help me to write English
+
 ### Table of Contents
-[컨샙](#concept)
-[알아둘점](#important)
-[Image Extraction](#extraction)
-[Retina-resolution extraction](#retina-extraction)
-[Style template extraction](#style-template-extraction)
-[Except extraction](#except-extraction)
-[Helper extraction](#helper-extraction)
-[Extraction with canvas size](#extraction-with-canvas-size)
+  - [Concept](#concept)
+  - [Important](#important)
+  - [Image Extraction](#extraction)
+  - [Retina-resolution extraction](#retina-extraction)
+  - [Style template extraction](#style-template-extraction)
+  - [Except extraction](#except-extraction)
+  - [Helper extraction](#helper-extraction)
+  - [Extraction with canvas size](#extraction-with-canvas-size)
 
 <a name="concept"/>
-## 컨샙 #
-포토샵 폴더(레이어셋)에 이름을 붙인뒤 스크립트를 동작시키면 스스로 이미지를 잘라내게 됩니다.
-이 스크립트는 웹과 모바일 프로그램 개발에 유용한 레이어 자름 스크립트입니다.
+## Concept #
+This script is useful for developing web and mobile application layer extraction script.
 
 <a name="important"/>
-## 알아둘점 #
-이미지추출은 폴더(LayerSet)단위로만 가능합니다.
+## Important #
+Extract is only be from LayerSet image.
 
-## 사용법 #
+## Usage #
 
 <a name="extraction"/>
-### 이미지추출 #
+### Extraction #
 @,파일이름,확장자명을 입력하면 하위폴더로 이미지가 추출됩니다.
 
 규칙
 ```
  @filename[png|jpeg|jpg|gif] => docname~/filename.[png|jpeg|jpg|gif]
 ```
-
-예제
 ```
 	@filename.png => docname~/filename.png
 	@filename.gif => docname~/filename.gif
