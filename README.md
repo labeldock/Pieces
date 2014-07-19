@@ -10,14 +10,11 @@ This is intended as a quick reference and showcase.
   - [Important](#important)
   - [SetupScript](#setup-script)
   - [Image Extraction](#extraction)
-  - [Retina-resolution extraction](#retina-extraction)
-  - [Style template extraction](#style-template-extraction)
+  - [Extract for Retina Resolution](#retina-extraction)
+  - [Auto style execute](#auto-style-exeucte)
   - [Except extraction](#except-extraction)
   - [Helper extraction](#helper-extraction)
   - [Extraction with canvas size](#extraction-with-canvas-size)
-
-
-
 
 
 <a name="concept"/>
@@ -36,8 +33,8 @@ Extract is only be from LayerSet image.
     - /Applications/Adobe Photoshop.../Presets/Scripts 
     - ![Insert in the name of LayerSet](/help-img/help-img-setup-1.png)
   - Windows
-    - C:\Program Files\Adobe\Adobe Photoshop...\Presets/Scripts
-    - C:\Program Files(x86)\Adobe\Adobe Photoshop...\Presets/Scripts
+    - C:\Program Files\Adobe\Adobe Photoshop...\Presets\Scripts
+    - C:\Program Files(x86)\Adobe\Adobe Photoshop...\Presets\Scripts
 
 
 
@@ -50,56 +47,59 @@ Extract is only be from LayerSet image.
 
 
 ```
- @filename[png|jpeg|jpg|gif]
-```
-![Insert in the name of LayerSet](/help-img/help-img-section-1.png)
-
-```
+	#syntex
+	@filename[png|jpeg|jpg|gif]
+	
+	#result
 	@filename.png => docname~/filename.png
 	@filename.gif => docname~/filename.gif
 	@filename.jpg => docname~/filename.jpg
 	@filename     => docname~/filename.png
 ```
+![Insert in the name of LayerSet](/help-img/help-img-section-1.png)
 ![Extract result](/help-img/help-img-section-2.png)
 
 
 <a name="retina-extraction"/>
-### 레티나 해상도 파일 추출  #
+### Extract for Retina Resolution  #
 고해상도 이미지와 함께 저해상도를 추출하고자 할 때 사용가능합니다. 현재 png추출만 지원하고 있습니다.
-
-
 ```
- @filename@2x => docname~/regular/filename.png , docname~/retina/filename@2x.png
+	#syntex
+	@filename@2x
+	
+	#result
+    => docname~/regular/filename.png
+    => docname~/retina/filename@2x.png
 ```
 ![retina-extraction-named](/help-img/help-img-section-3.png)
 ![retina-extraction-result](/help-img/help-img-section-4.png)
 
 
-<a name="style-template-extraction"/>
-### 다수 레이어셋 스타일 적용  #
-추후 설명 보강예정..
+<a name="auto-style-exeucte"/>
+### Auto style execute  #
 ```
-@some-01
-@some-02
-@some-03
-$some-$
-$some-$-active
-$some-$-hover
+	#syntex
+	@some-01
+		layer
+	$some-$
+		layer(default fx)
+	$some-$-active
+		layer(active fx)
+	$some-$-hover
+		layer(hover fx)
+	
+	#result
+	@some-01.png (default fx image),
+	@some-01-active.png (active fx image),
+	@some-01-hover.png (hover fx image),
+```
+![auto-style-named](/help-img/help-img-section-5.png)
+![auto-style-result](/help-img/help-img-section-6.png)
+![auto-style-deatail](/help-img/help-img-section-7.png)
 
-(out)=>
-@some-01.png,
-@some-01-active.png,
-@some-01-hover.png,
-@some-02.png,
-@some-02-active.png,
-@some-02-hover.png,
-@some-03.png,
-@some-03-active.png,
-@some-03-hover.png
-```
 
 <a name="except-extraction"/>
-### 이미지추출 대상 제외  #
+### Except extraction  #
 내부에 예제로 들어간 이미지 대상을 제거할 수 있습니다.
 
 규칙
@@ -108,7 +108,7 @@ $some-$-hover
 ```
 
 <a name="helper-extraction"/>
-### 도움이미지 추출  #
+### Helper Extraction  #
 규칙
 ```
  {help}filename       =>   docname~/help/filename.png
@@ -116,7 +116,7 @@ $some-$-hover
 ```
 
 <a name="extraction-with-canvas-size"/>
-### 캔버스크기 지정  #
+### Extraction with canvas size  #
 추출될 이미지의 고정크기를 지정할 수 있습니다. 옵션이 좀 더 있으나 초안에서는 생략됩니다.
 
 규칙
