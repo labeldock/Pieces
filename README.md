@@ -27,6 +27,7 @@ This script is useful for developing web and mobile application layer extraction
 Extract is only be from LayerSet image.
 
 
+<a name="setup"/>
 ## Setup Script #
   pieces.jsx copy into Photoshop Scripts folder.
   - OSX
@@ -37,10 +38,16 @@ Extract is only be from LayerSet image.
     - C:\Program Files(x86)\Adobe\Adobe Photoshop...\Presets\Scripts
 
 
-
-<a name="setup"/>
-## Usage #
-
+## Run Script #
+	[\Photoshop Menubar] File > Script > Pieces
+	
+	![run](/help-img/help-img-section-2.png)
+	
+	- Selected layerset (Extraction in selected layerset)
+	- inspect size      (Inspect the selected layerset extraction size)
+	- All               (Extraction all)
+	- Close             (Exit run)
+	
 <a name="extraction"/>
 ### Extraction #
 @,파일이름,확장자명을 입력하면 하위폴더로 이미지가 추출됩니다.
