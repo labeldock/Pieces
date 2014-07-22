@@ -38,16 +38,18 @@ Extract is only be from LayerSet image.
     - C:\Program Files(x86)\Adobe\Adobe Photoshop...\Presets\Scripts
 
 
+<a name="run"/>
 ## Run Script #
-	[\Photoshop Menubar] File > Script > Pieces
-	
-	![run](/help-img/help-img-section-2.png)
-	
+[Photoshop Menubar] File > Script > Pieces
+
+![run-img](/help-img/help-img-setup-2.png)
+
+```
 	- Selected layerset (Extraction in selected layerset)
 	- inspect size      (Inspect the selected layerset extraction size)
 	- All               (Extraction all)
 	- Close             (Exit run)
-	
+```
 <a name="extraction"/>
 ### Extraction #
 @,파일이름,확장자명을 입력하면 하위폴더로 이미지가 추출됩니다.
