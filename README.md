@@ -23,7 +23,7 @@ This script is useful for developing web and mobile application layer extraction
 Pieces는 다음으 목적을 위해 만들어졌습니다.
   - 빠른 프로토타입 페이지 개발
   - 겹쳐진 복수의 이미지를 깔끔하게 추출
-  - 이미지 추출과 같은 단순반복작업 제거
+  - 디자인 산출물에서 즉시 수정/추출
   
   
 
