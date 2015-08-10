@@ -1,13 +1,13 @@
 #target photoshop
 /* author : HO-JUNG AHN (labeldock@me.com) */
 /* license : MIT */
-var pieces = "0.9.6";
+var pieces = "0.9.6.1";
 /*
  #usage
  named photoshop folder(layerSet)
 
  @name                  => name.png
- name[png|jpeg|jpg|gif|svg] => name.[png|jpeg|jpg|gif|svg]
+ name[png|jpeg|jpg|gif|svg|ai] => name.[png|jpeg|jpg|gif|svg|ai]
  @name-01 ... && $name  => "executeEqualStyle!"
  {!@}                   => "no render target of all children"
  {help}                 => "only render :help"
@@ -198,7 +198,8 @@ var queMakerFilter = {
 		if(/\.j[\w]*$/.test(name)) return "jpeg";
 		if(/\.g[\w]*$/.test(name)) return "gif";
 		if(/\.s[\w]*$/.test(name)) return "svg";	
-		return /(png|jpg|jpeg|gif|svg)/i.test(name) ? /(png|jpg|jpeg|gif|svg)/i.exec(name)[1] : "png";
+		if(/\.a[\w]*$/.test(name)) return "ai";	
+		return /(png|jpg|jpeg|gif|svg|ai)/i.test(name) ? /(png|jpg|jpeg|gif|svg|ai)/i.exec(name)[1] : "png";
 	},
 	wirteOutBlock:function(baseObject,fileName,pathExtend,outSize){
 		var resultInfo = mvObject(baseObject);
@@ -514,7 +515,16 @@ var SaveToPNG = function(document,path){
     document.exportDocument(new File(path), ExportType.SAVEFORWEB, saveOption);
 };
 
+var SaveToAI = function(document,path){
+	alert("Not support yet extract artborad to *.ai");
+    var saveOption = new ExportOptionsIllustrator();
+	saveOption.pathName = document.activeLayer.name;
+    saveOption.path = IllustratorPathType.ALLPATHS;
+    document.exportDocument(new File(path), ExportType.ILLUSTRATORPATHS, saveOption);
+};
+
 var SaveToSVG = function(document,path){
+	alert("Not support yet extract artborad to *.svg");
     var saveOption = new ExportOptionsIllustrator();
     saveOption.path = IllustratorPathType.ALLPATHS;
     //saveOption.pathName = document.currentLayer;
@@ -758,6 +768,8 @@ var fireWorks = function(specialCommand) {
 			case "gif":
 				SaveToGIF(copyDocument,workQue.outOfFileExtractPath);
 				break;
+			case "ai":
+				SaveToAI(copyDocument,workQue.outOfFileExtractPath);
 			case "svg":
 				SaveToSVG(copyDocument,workQue.outOfFileExtractPath);
                   break;
@@ -1005,3 +1017,4 @@ var firstInit = function(){
 };
 
 firstInit();
+
